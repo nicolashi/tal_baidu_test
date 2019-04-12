@@ -12,7 +12,7 @@ import base64
 
 def main():
 
-    directory = "./data/"
+    directory = "./face_analysis_data/"
 
     api_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"
     access_token = '24.9e4fc89b43b955ff1d803c189446a47c.2592000.1557630178.282335-15993344'
