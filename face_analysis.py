@@ -1,5 +1,5 @@
 #
-# Date Created: 2019.04.04
+# Date Created: 2019.04.0d4
 # Modified By: Shi Yi Wei
 # Purpose: connect to Baidu API and run test image set to collect data 
 # on the accuracy of Baidu's facial scanning technology 
@@ -12,10 +12,10 @@ import base64
 
 def main():
 
-    directory = "C:/Users/user/Desktop/algo/data/face_analysis/"
+    directory = "./data/"
 
     api_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"
-    access_token = '25.09f3d361d83fe0f82b3e827d493d2702.315360000.1870328063.282335-15993344'
+    access_token = '24.9e4fc89b43b955ff1d803c189446a47c.2592000.1557630178.282335-15993344'
     request_url = api_url + "?access_token=" + access_token
 
     # set detection options (gender, expression(smile), glasses)
@@ -28,7 +28,7 @@ def main():
             curr_img = extract_img(filepath)
             #print("\n" + filepath + "\n")
             
-            params = "{\"image\":\"" + str(curr_img) + "\"" +\
+            params = "{\"image\":\"" + str(curr_img) + "\"," +\
             "\"image_type\":\"BASE64\"," +\
             "\"max_face_num\":10 ," +\
             "\"face_field\":\"" + fields + "\"}"

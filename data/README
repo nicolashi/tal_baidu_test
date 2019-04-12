@@ -1,6 +1,0 @@
-face_analysis
-  - contains image files to be used in testing of Baidu's facial analysis API
-
-face_recognition
-  - gallery: images for creation of database of faces
-  - test：images to be used to test Baidu's face recognition API
