@@ -14,7 +14,7 @@ def main():
     directory = "C:/Users/user/Desktop/algo/data/face_recognition/"
 
     api_url = "https://aip.baidubce.com/rest/2.0/face/v2/identify"
-    access_token = '24.f6df1652adfbc27ae00113f16f1e8bc6.2592000.1557303389.282335-15917127'
+    access_token = '24.9e4fc89b43b955ff1d803c189446a47c.2592000.1557630178.282335-15993344'
     request_url = api_url + "?access_token=" + access_token
 
 
