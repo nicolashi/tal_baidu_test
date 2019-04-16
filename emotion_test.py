@@ -13,14 +13,14 @@ import time
 
 def main():
 
-    directory = "./face_analysis_data/"
+    directory = "./face_analysis_data/cls_face_emotion/"
 
     api_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"
     access_token = '24.9e4fc89b43b955ff1d803c189446a47c.2592000.1557630178.282335-15993344'
     request_url = api_url + "?access_token=" + access_token
 
     # set detection options (gender, expression(smile), glasses)
-    fields = "gender,gender_probability,expression,expression_probability,glasses,glasses_probability"
+    fields = "expression,expression_probability"
 
     # traverse all test image files and output results for each image
     for root, dirs, files in os.walk(directory, topdown=False):
