@@ -9,6 +9,7 @@
 import os
 import urllib, urllib2
 import base64
+import time
 
 def main():
 
@@ -22,12 +23,13 @@ def main():
     fields = "gender,gender_probability,expression,expression_probability,glasses,glasses_probability"
 
     # traverse all test image files and output results for each image
-    for filename in os.listdir(directory):
-        if filename.endswith(".jpg"):
-            filepath = directory + filename
-            curr_img = extract_img(filepath)
-            #print("\n" + filepath + "\n")
-            
+    for root, dirs, files in os.walk(directory, topdown=False):
+	for filename in files:
+	    if filename.endswith(".jpg"):
+ 		filepath = root + "/" + filename
+                print(filepath)
+                curr_img = extract_img(filepath)  
+         
             params = "{\"image\":\"" + str(curr_img) + "\"," +\
             "\"image_type\":\"BASE64\"," +\
             "\"max_face_num\":10 ," +\
@@ -39,6 +41,7 @@ def main():
             content = response.read()
             if content:
                 print(content)
+		time.sleep(0.35)
 
 
 #
