@@ -23,15 +23,18 @@ def main():
                 data_count += 1
                 curr_json = line
                 try:
-                    if check_correct(line, expected) == True:
-                        #print("success")
-                        successes += 1
-                    else:
-                        #print("fail", end=" ")
-                        #print(line, end=" ")
-                        #print("EXPECTED: ", end=" ")
-                        #print(expected)
-                        fails += 1
+                    print(curr_file)
+                    print(line)
+                    if line.find("glasses") != -1:
+                        if check_correct(line, expected) == True:
+                            #print("success")
+                            successes += 1
+                        else:
+                            #print("fail", end=" ")
+                            #print(line, end=" ")
+                            #print("EXPECTED: ", end=" ")
+                            #print(expected)
+                            fails += 1
                 except:
                     pass
             else:
@@ -71,16 +74,16 @@ def check_correct(obtained, expected):
         return False
 
     # get value of glasses
-    glasses_index = obtained.find("glasses")
-    glasses_sect = obtained[glasses_index:]
-    if "none" in glasses_sect:
-        #print("glasses")
-        glasses = '0'
-    else:
-        glasses = '1'
-    #print("glasses done")
-    if glasses != expected[0]:
-        return False
+    #glasses_index = obtained.find("glasses")
+    #glasses_sect = obtained[glasses_index:]
+   # if "none" in glasses_sect:
+          #print("glasses")
+     #   glasses = '0'
+    #else:
+      #  glasses = '1'
+ #   #print("glasses done")
+    #if glasses != expected[0]:
+     #   return False
 
     return True
 
