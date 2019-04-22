@@ -1,0 +1,9 @@
+./det_face_id_tf_v1.0.2/images/test/32/63.jpg
+{"error_code":0,"error_msg":"SUCCESS","log_id":744193259174092601,"timestamp":1555917409,"cached":0,"result":{"face_token":"4b654c66df4cb8ba6ccbd246aa2b7b9f","user_list":[{"group_id":"comparison_test","user_id":"32","user_info":"","score":79.814865112305}]}}
+./det_face_id_tf_v1.0.2/images/test/32/189.jpg
+{"error_code":0,"error_msg":"SUCCESS","log_id":744193259174127181,"timestamp":1555917412,"cached":0,"result":{"face_token":"d101d08f8c41253d1c1ffa3c423e505a","user_list":[{"group_id":"comparison_test","user_id":"32","user_info":"","score":91.917427062988}]}}
+./det_face_id_tf_v1.0.2/images/test/32/77.jpg
+{"error_code":0,"error_msg":"SUCCESS","log_id":747956959174165811,"timestamp":1555917416,"cached":0,"result":{"face_token":"676760f45496e228d988d398ee57aa55","user_list":[{"group_id":"comparison_test","user_id":"32","user_info":"","score":94.040588378906}]}}
+./det_face_id_tf_v1.0.2/images/test/32/162.jpg
+{"error_code":222202,"error_msg":"pic not has face","log_id":747956959174199351,"timestamp":1555917419,"cached":0,"result":null}
+./det_face_id_tf_v1.0.2/images/test/32/176.jpg
