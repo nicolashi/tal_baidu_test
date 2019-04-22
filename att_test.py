@@ -41,6 +41,8 @@ def main():
                 content = response.read()
                 if content:
                     print(content)
+
+            # pause to avoid too many qps
             time.sleep(0.3)
 
 

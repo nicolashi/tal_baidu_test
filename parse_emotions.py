@@ -43,6 +43,10 @@ def main():
     print(accuracy)
     
 
+#
+# Purpose: read the txt file with list of test images and expected results
+# 
+#
 def create_database():
     database = {}
     with open("list.txt", "r") as f:
