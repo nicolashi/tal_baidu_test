@@ -27,20 +27,10 @@ def main():
                 print(filepath)
                 curr_img = extract_img(filepath)
 
-                #params = json.dumps("{\"image\":\"" + str(curr_img, "utf-8") + "\"," +\
-                #         "\"image_type\":\"BASE64\"," +\
-                #         "\"group_id_list\":\"\"comparison_test\"}"
-
-                #params = json.dumps("{\"image\":\"" + curr_img + "\"," +\
-                #         "\"image_type\":\"BASE64\"," +\
-                #         "\"group_id_list\":\"\"comparison_test\"}")
-
-                #print(params)
                 params = {}
                 params["image"] = str(curr_img)
                 params["image_type"] = "BASE64"
                 params["group_id_list"] = "comparison_test"
-
                 params = json.dumps(params)
 
                 request = urllib2.Request(url=request_url, data=params)
