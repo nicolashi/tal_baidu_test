@@ -41,7 +41,7 @@ def main():
                 if content:
                     print(content)
 
-            time.sleep(0.05)
+            time.sleep(0.3)
 
 
 #
