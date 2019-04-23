@@ -15,7 +15,7 @@ def main():
             if line[0] != ".":
                 total_files += 1
                 try:
-                    if line.find("user_id") != -1:
+                    if line.find("SUCCESS") != -1:
                         faces_found += 1
                         if check_correct(line, curr_file) == True:
                             #print("success")
@@ -27,6 +27,7 @@ def main():
             else:
                 ref = line.find("test")
                 curr_file = line[ref + 5:-1]
+                #print(curr_file)
  
     print("successes: ", end="")
     print(successes)
@@ -45,8 +46,9 @@ def main():
 
 
 def check_correct(obtained, filepath):
-    expected = filepath.split("\\", 2)[0]
+    expected = filepath.split("/", 2)[0]
     start_idx = obtained.find("user_id")
+    #print(obtained[start_idx:start_idx+15])
     if expected in obtained[start_idx:start_idx + 15]:
         return True
     return False
