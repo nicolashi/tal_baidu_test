@@ -13,14 +13,11 @@ import time
 
 def main():
 
-    directory = "./data/analysis" # TODO: Add dir name for data
+    directory = "./data/det_body_ssd" # TODO: Add dir name for data
 
     api_url = "https://aip.baidubce.com/rest/2.0/image-classify/v1/body_attr"
     access_token = '24.3ba60e2073f090a0a614373a0d5a80c6.2592000.1558582725.282335-16088071'
     request_url = api_url + "?access_token=" + access_token
-
-    # set detection options (gender, glasses, etc.)
-    fields = "gender,glasses"
 
     # traverse all test image files and output results for each image
     for root, dirs, files in os.walk(directory, topdown=False):
@@ -30,7 +27,7 @@ def main():
                 print(filepath)
                 curr_img = extract_img(filepath)  
             
-                params = {"image": curr_img}
+                params = {"image": curr_img, "type": "gender"}
                 params = urllib.urlencode(params)
                 
                 request = urllib2.Request(url=request_url, data=params)
