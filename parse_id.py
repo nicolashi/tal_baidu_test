@@ -25,7 +25,8 @@ def main():
                 except:
                     pass
             else:
-                curr_file = line[63:-1]
+                ref = line.find("test")
+                curr_file = line[ref + 5:-1]
  
     print("successes: ", end="")
     print(successes)
@@ -46,7 +47,7 @@ def main():
 def check_correct(obtained, filepath):
     expected = filepath.split("\\", 2)[0]
     start_idx = obtained.find("user_id")
-    if expected in obtained[start_idx:-1]:
+    if expected in obtained[start_idx:start_idx + 15]:
         return True
     return False
 
