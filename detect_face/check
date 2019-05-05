@@ -1,8 +1,0 @@
-./new_test_398/test_gallery/63.jpg
-{"error_code":223105,"error_msg":"face is already exist","log_id":304592862775534371,"timestamp":1556277553,"cached":0,"result":null}
-./new_test_398/test_gallery/189.jpg
-{"error_code":223105,"error_msg":"face is already exist","log_id":304592862775541081,"timestamp":1556277554,"cached":0,"result":null}
-./new_test_398/test_gallery/77.jpg
-{"error_code":223105,"error_msg":"face is already exist","log_id":305486862775547661,"timestamp":1556277554,"cached":0,"result":null}
-./new_test_398/test_gallery/162.jpg
-{"error_code":223105,"error_msg":"face is already exist","log_id":304569262775554401,"timestamp":1556277555,"cached":0,"result":null}

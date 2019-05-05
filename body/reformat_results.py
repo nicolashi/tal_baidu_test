@@ -15,7 +15,6 @@ def main():
             if line[0] != ".":
                 detected += 1
                 try:
-                    # TODO: split results for each person
                     data = json.loads(line)
                     split_data(data["person_info"])
                 except:

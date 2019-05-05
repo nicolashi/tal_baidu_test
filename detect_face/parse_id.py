@@ -48,8 +48,8 @@ def main():
 def check_correct(obtained, filepath):
     expected = filepath.split("/", 2)[0]
     start_idx = obtained.find("user_id")
-    print(expected)
-    print(obtained[start_idx:start_idx+15])
+    #print(expected)
+    #print(obtained[start_idx:start_idx+15])
     if expected in obtained[start_idx:start_idx + 15]:
         return True
     return False
